@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#1e3a5f">
+    <meta name="description" content="Prototype interactif de l'application Kamitus.">
+    <meta property="og:title" content="Prototype Kamitus">
+    <meta property="og:description" content="Parcourez les principaux parcours de l'application Kamitus.">
+    <meta property="og:image" content="social/og-image-1200x630.png">
+    <title>Prototype Kamitus</title>
+    <link rel="icon" href="favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png">
+    <link rel="manifest" href="prototype/manifest.webmanifest">
+    <link rel="stylesheet" href="prototype/styles.css">
+    <script src="figma-plugin/code.js" defer></script>
+    <script src="prototype/app.js" defer></script>
+  </head>
+  <body>
+    <div class="prototype-shell">
+      <aside class="flow-panel" id="flow-panel" aria-label="Parcours du prototype">
+        <div class="brand-row">
+          <img src="logo/kamitus-logo-horizontal.png" alt="Kamitus" width="190" height="54">
+          <button class="icon-button panel-close" id="panel-close" type="button" aria-label="Fermer les parcours" title="Fermer">
+            <span aria-hidden="true">&#10005;</span>
+          </button>
+        </div>
+        <div class="panel-heading">
+          <h1>Prototype mobile</h1>
+          <span class="flow-count" id="flow-count"></span>
+        </div>
+        <nav class="flow-list" id="flow-list"></nav>
+      </aside>
+
+      <section class="workspace" aria-label="Lecteur du prototype">
+        <header class="toolbar">
+          <button class="icon-button panel-open" id="panel-open" type="button" aria-label="Afficher les parcours" title="Parcours">
+            <span aria-hidden="true">&#9776;</span>
+          </button>
+          <div class="screen-meta">
+            <span id="flow-title"></span>
+            <strong id="screen-title"></strong>
+          </div>
+          <div class="toolbar-actions">
+            <label class="zones-toggle" title="Afficher les zones interactives">
+              <input id="zones-toggle" type="checkbox">
+              <span>Zones</span>
+            </label>
+            <button class="icon-button" id="back-button" type="button" aria-label="Revenir à l'écran précédent" title="Retour">
+              <span aria-hidden="true">&#8592;</span>
+            </button>
+            <button class="icon-button" id="reset-button" type="button" aria-label="Recommencer le parcours" title="Recommencer">
+              <span aria-hidden="true">&#8634;</span>
+            </button>
+          </div>
+        </header>
+
+        <main class="canvas">
+          <div class="device" id="device" aria-live="polite">
+            <img class="screen-image" id="screen-image" alt="">
+            <div class="hotspot-layer" id="hotspot-layer"></div>
+            <div class="loading-state" id="loading-state" role="status" aria-label="Chargement de l'écran">
+              <img src="loading/kamitus-loader.svg" alt="" width="72" height="72">
+            </div>
+            <div class="error-state" id="error-state" role="alert" hidden>Écran indisponible</div>
+          </div>
+        </main>
+      </section>
+      <button class="panel-scrim" id="panel-scrim" type="button" aria-label="Fermer les parcours"></button>
+    </div>
+    <noscript>JavaScript est requis pour parcourir le prototype Kamitus.</noscript>
+  </body>
+</html>
