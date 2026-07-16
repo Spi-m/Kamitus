@@ -102,11 +102,11 @@ addBottomNavigation("SCR-WALK-005-participation");
 addBack("SCR-WALK-006-participants", "SCR-WALK-008-detail-inscrit");
 add("SCR-WALK-006-participants", "Écrire au groupe", [20, 688, 350, 46], "SCR-WALK-007-coordination");
 addBottomNavigation("SCR-WALK-006-participants");
-addBack("SCR-WALK-007-coordination", "SCR-WALK-006-participants");
+addBack("SCR-WALK-007-coordination", "SCR-WALK-008-detail-inscrit");
 addBottomNavigation("SCR-WALK-007-coordination");
 addBack("SCR-WALK-008-detail-inscrit", "SCR-WALK-001-liste");
 add("SCR-WALK-008-detail-inscrit", "Participants", [20, 730, 170, 42], "SCR-WALK-006-participants");
-add("SCR-WALK-008-detail-inscrit", "Coordination", [200, 730, 170, 42], "SCR-WALK-007-coordination");
+add("SCR-WALK-008-detail-inscrit", "Conversation", [200, 730, 170, 42], "SCR-WALK-007-coordination");
 add("SCR-WALK-008-detail-inscrit", "Lieu de rendez-vous", [20, 780, 170, 42], "SCR-NAV-001-navigation-depart");
 add("SCR-WALK-008-detail-inscrit", "Parcours", [200, 780, 170, 42], "SCR-WALK-011-parcours-inscrit");
 addBack("SCR-WALK-009-lieu-rendez-vous", "SCR-WALK-003-detail");
@@ -186,7 +186,7 @@ const flowStarts = [
   ["SCR-WALK-004-creation", "Créer une balade"],
   ["SCR-WALK-003-detail", "Rejoindre une balade"],
   ["SCR-WALK-008-detail-inscrit", "Balade rejointe"],
-  ["SCR-WALK-006-participants", "Participants et coordination"],
+  ["SCR-WALK-006-participants", "Participants et conversation"],
   ["SCR-NAV-ROUTE-001-definition", "Créer un parcours"],
   ["SCR-NAV-001-navigation-depart", "Navigation vers le départ"],
   ["SCR-NAV-TRACK-001-demarrage", "Suivi de promenade"],
