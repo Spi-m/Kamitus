@@ -1,6 +1,6 @@
 # Prototype web Kamitus
 
-Ce dépôt publie le prototype interactif de l'application Kamitus. Il contient 50 écrans mobiles, 158 interactions et 15 parcours fonctionnels.
+Ce dépôt publie le prototype interactif de l'application Kamitus. Il contient 55 écrans mobiles, 170 interactions et 15 parcours fonctionnels.
 
 ## Test local
 
@@ -24,6 +24,8 @@ Le site sera disponible sur `https://spi-m.github.io/Kamitus/`.
 ## Source
 
 Les écrans et interactions sont exportés depuis le kit de marque Kamitus. Les zones cliquables utilisent le même référentiel que le plugin Figma.
+
+La création du premier animal dispose d'un sous-parcours dédié : après l'enregistrement, l'onboarding reprend sur l'étape de localisation sans modifier le comportement de l'ajout depuis le profil.
 
 Lorsqu'une navigation atteint le point de départ d'un autre parcours, le lecteur met automatiquement à jour le parcours actif, la sélection latérale et l'URL.
 
