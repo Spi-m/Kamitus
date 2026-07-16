@@ -21,15 +21,28 @@ function addBottomNavigation(source) {
 
 // Authentification
 add("SCR-AUTH-001-bienvenue", "Créer un compte", [24, 700, 342, 48], "SCR-AUTH-002-inscription");
-add("SCR-AUTH-001-bienvenue", "Se connecter", [24, 758, 342, 48], "SCR-AUTH-003-connexion");
+add("SCR-AUTH-001-bienvenue", "Se connecter", [24, 758, 342, 48], "SCR-AUTH-004-connexion");
 addBack("SCR-AUTH-002-inscription", "SCR-AUTH-001-bienvenue");
-add("SCR-AUTH-002-inscription", "Créer mon compte", [24, 646, 342, 48], "SCR-ONBOARD-001-onboarding");
-add("SCR-AUTH-002-inscription", "Déjà membre", [118, 700, 248, 44], "SCR-AUTH-003-connexion");
-addBack("SCR-AUTH-003-connexion", "SCR-AUTH-001-bienvenue");
-add("SCR-AUTH-003-connexion", "Mot de passe oublié", [194, 496, 172, 54], "SCR-AUTH-004-recuperation");
-add("SCR-AUTH-003-connexion", "Se connecter", [24, 568, 342, 48], "SCR-WALK-001-liste");
-addBack("SCR-AUTH-004-recuperation", "SCR-AUTH-003-connexion");
-add("SCR-AUTH-004-recuperation", "Envoyer le lien", [24, 470, 342, 48], "SCR-AUTH-003-connexion");
+add("SCR-AUTH-002-inscription", "S'inscrire avec Google", [24, 342, 342, 52], "SCR-ONBOARD-001-onboarding");
+add("SCR-AUTH-002-inscription", "S'inscrire avec Apple", [24, 404, 342, 52], "SCR-ONBOARD-001-onboarding");
+add("SCR-AUTH-002-inscription", "S'inscrire avec Meta", [24, 466, 342, 52], "SCR-ONBOARD-001-onboarding");
+add("SCR-AUTH-002-inscription", "S'inscrire par e-mail", [24, 528, 342, 52], "SCR-AUTH-003-inscription-email");
+add("SCR-AUTH-002-inscription", "Déjà membre", [90, 288, 276, 40], "SCR-AUTH-004-connexion");
+addBack("SCR-AUTH-003-inscription-email", "SCR-AUTH-002-inscription");
+add("SCR-AUTH-003-inscription-email", "Créer mon compte", [24, 580, 342, 48], "SCR-ONBOARD-001-onboarding");
+add("SCR-AUTH-003-inscription-email", "Déjà membre", [90, 632, 276, 44], "SCR-AUTH-004-connexion");
+addBack("SCR-AUTH-004-connexion", "SCR-AUTH-001-bienvenue");
+add("SCR-AUTH-004-connexion", "Se connecter avec Google", [24, 342, 342, 52], "SCR-WALK-001-liste");
+add("SCR-AUTH-004-connexion", "Se connecter avec Apple", [24, 404, 342, 52], "SCR-WALK-001-liste");
+add("SCR-AUTH-004-connexion", "Se connecter avec Meta", [24, 466, 342, 52], "SCR-WALK-001-liste");
+add("SCR-AUTH-004-connexion", "Se connecter par e-mail", [24, 528, 342, 52], "SCR-AUTH-005-connexion-email");
+add("SCR-AUTH-004-connexion", "Créer un compte", [74, 288, 292, 40], "SCR-AUTH-002-inscription");
+addBack("SCR-AUTH-005-connexion-email", "SCR-AUTH-004-connexion");
+add("SCR-AUTH-005-connexion-email", "Mot de passe oublié", [194, 470, 172, 40], "SCR-AUTH-006-recuperation");
+add("SCR-AUTH-005-connexion-email", "Se connecter", [24, 520, 342, 48], "SCR-WALK-001-liste");
+add("SCR-AUTH-005-connexion-email", "Créer un compte", [74, 578, 292, 44], "SCR-AUTH-002-inscription");
+addBack("SCR-AUTH-006-recuperation", "SCR-AUTH-005-connexion-email");
+add("SCR-AUTH-006-recuperation", "Envoyer le lien", [24, 470, 342, 48], "SCR-AUTH-005-connexion-email");
 
 // Onboarding
 add("SCR-ONBOARD-001-onboarding", "Commencer", [24, 590, 342, 48], "SCR-ONBOARD-002-profil");
