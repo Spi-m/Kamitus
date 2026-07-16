@@ -9,8 +9,9 @@
   const BASE_WIDTH = 390;
   const BASE_HEIGHT = 844;
   const SCREEN_PATH = "app-screens/screens/";
-  const ASSET_VERSION = "20260716.5";
+  const ASSET_VERSION = "20260716.6";
   const SCREEN_NAME_OVERRIDES = new Map([
+    ["SCR-WALK-005-participation", "WALK 005 · Inscription"],
     ["SCR-WALK-007-coordination", "WALK 007 · Conversation"]
   ]);
   const shell = document.querySelector(".prototype-shell");
