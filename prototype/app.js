@@ -9,7 +9,7 @@
   const BASE_WIDTH = 390;
   const BASE_HEIGHT = 844;
   const SCREEN_PATH = "app-screens/screens/";
-  const ASSET_VERSION = "20260716.1";
+  const ASSET_VERSION = "20260716.2";
   const shell = document.querySelector(".prototype-shell");
   const device = document.querySelector("#device");
   const screenImage = document.querySelector("#screen-image");
