@@ -89,21 +89,30 @@ add("SCR-WALK-002-carte", "Voir le détail", [88, 688, 266, 46], "SCR-WALK-003-d
 addBottomNavigation("SCR-WALK-002-carte");
 addBack("SCR-WALK-003-detail", "SCR-WALK-001-liste");
 add("SCR-WALK-003-detail", "Rejoindre la balade", [20, 684, 350, 46], "SCR-WALK-005-participation");
-add("SCR-WALK-003-detail", "Itinéraire", [20, 740, 170, 42], "SCR-NAV-001-navigation-depart");
-add("SCR-WALK-003-detail", "Parcours", [200, 740, 170, 42], "SCR-NAV-ROUTE-002-apercu");
+add("SCR-WALK-003-detail", "Lieu de rendez-vous", [20, 740, 170, 42], "SCR-WALK-009-lieu-rendez-vous");
+add("SCR-WALK-003-detail", "Parcours", [200, 740, 170, 42], "SCR-WALK-010-parcours");
 addBack("SCR-WALK-004-creation", "SCR-WALK-001-liste");
 add("SCR-WALK-004-creation", "Définir le parcours", [24, 596, 342, 60], "SCR-NAV-ROUTE-001-definition");
 add("SCR-WALK-004-creation", "Animal participant", [24, 664, 342, 60], "SCR-ANIMAL-002-liste");
 add("SCR-WALK-004-creation", "Continuer vers le parcours", [24, 736, 342, 48], "SCR-NAV-ROUTE-001-definition");
 addBack("SCR-WALK-005-participation", "SCR-WALK-003-detail");
 add("SCR-WALK-005-participation", "Modifier les animaux", [270, 326, 100, 74], "SCR-ANIMAL-002-liste");
-add("SCR-WALK-005-participation", "Confirmer la participation", [20, 690, 350, 48], "SCR-WALK-006-participants");
+add("SCR-WALK-005-participation", "Confirmer la participation", [20, 690, 350, 48], "SCR-WALK-008-detail-inscrit");
 addBottomNavigation("SCR-WALK-005-participation");
-addBack("SCR-WALK-006-participants", "SCR-WALK-005-participation");
+addBack("SCR-WALK-006-participants", "SCR-WALK-008-detail-inscrit");
 add("SCR-WALK-006-participants", "Écrire au groupe", [20, 688, 350, 46], "SCR-WALK-007-coordination");
 addBottomNavigation("SCR-WALK-006-participants");
 addBack("SCR-WALK-007-coordination", "SCR-WALK-006-participants");
 addBottomNavigation("SCR-WALK-007-coordination");
+addBack("SCR-WALK-008-detail-inscrit", "SCR-WALK-001-liste");
+add("SCR-WALK-008-detail-inscrit", "Participants", [20, 730, 170, 42], "SCR-WALK-006-participants");
+add("SCR-WALK-008-detail-inscrit", "Coordination", [200, 730, 170, 42], "SCR-WALK-007-coordination");
+add("SCR-WALK-008-detail-inscrit", "Lieu de rendez-vous", [20, 780, 170, 42], "SCR-NAV-001-navigation-depart");
+add("SCR-WALK-008-detail-inscrit", "Parcours", [200, 780, 170, 42], "SCR-WALK-011-parcours-inscrit");
+addBack("SCR-WALK-009-lieu-rendez-vous", "SCR-WALK-003-detail");
+add("SCR-WALK-009-lieu-rendez-vous", "Rejoindre la balade", [16, 668, 358, 48], "SCR-WALK-005-participation");
+addBack("SCR-WALK-010-parcours", "SCR-WALK-003-detail");
+addBack("SCR-WALK-011-parcours-inscrit", "SCR-WALK-008-detail-inscrit");
 
 // Création, import et export d'un parcours
 addBack("SCR-NAV-ROUTE-001-definition", "SCR-WALK-004-creation");
@@ -121,11 +130,11 @@ add("SCR-NAV-ROUTE-004-export", "Exporter le GPX", [16, 630, 358, 64], "SCR-NAV-
 add("SCR-NAV-ROUTE-004-export", "Partager le lien", [16, 704, 358, 64], "SCR-NAV-ROUTE-002-apercu");
 
 // Navigation jusqu'au point de départ
-addBack("SCR-NAV-001-navigation-depart", "SCR-WALK-003-detail");
+addBack("SCR-NAV-001-navigation-depart", "SCR-WALK-008-detail-inscrit");
 add("SCR-NAV-001-navigation-depart", "Démarrer le guidage", [16, 668, 358, 48], "SCR-NAV-002-guidage-actif");
 add("SCR-NAV-002-guidage-actif", "Recalculer l'itinéraire", [16, 58, 358, 96], "SCR-NAV-003-recalcul-itineraire");
 add("SCR-NAV-002-guidage-actif", "Simuler l'arrivée", [0, 620, 390, 96], "SCR-NAV-004-arrivee");
-add("SCR-NAV-002-guidage-actif", "Arrêter le guidage", [194, 740, 166, 76], "SCR-WALK-003-detail");
+add("SCR-NAV-002-guidage-actif", "Arrêter le guidage", [194, 740, 166, 76], "SCR-WALK-008-detail-inscrit");
 addBack("SCR-NAV-004-arrivee", "SCR-NAV-002-guidage-actif");
 add("SCR-NAV-004-arrivee", "Ouvrir la balade", [24, 646, 342, 48], "SCR-NAV-TRACK-001-demarrage");
 add("SCR-NAV-004-arrivee", "Voir les participants", [24, 708, 342, 42], "SCR-WALK-006-participants");
@@ -176,6 +185,7 @@ const flowStarts = [
   ["SCR-WALK-001-liste", "Explorer les balades"],
   ["SCR-WALK-004-creation", "Créer une balade"],
   ["SCR-WALK-003-detail", "Rejoindre une balade"],
+  ["SCR-WALK-008-detail-inscrit", "Balade rejointe"],
   ["SCR-WALK-006-participants", "Participants et coordination"],
   ["SCR-NAV-ROUTE-001-definition", "Créer un parcours"],
   ["SCR-NAV-001-navigation-depart", "Navigation vers le départ"],
