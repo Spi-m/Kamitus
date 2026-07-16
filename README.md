@@ -1,6 +1,6 @@
 # Prototype web Kamitus
 
-Ce dépôt publie le prototype interactif de l'application Kamitus. Il contient 43 écrans mobiles, 132 interactions et 14 parcours fonctionnels.
+Ce dépôt publie le prototype interactif de l'application Kamitus. Il contient 44 écrans mobiles, 136 interactions et 14 parcours fonctionnels.
 
 ## Test local
 
