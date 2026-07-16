@@ -9,7 +9,10 @@
   const BASE_WIDTH = 390;
   const BASE_HEIGHT = 844;
   const SCREEN_PATH = "app-screens/screens/";
-  const ASSET_VERSION = "20260716.3";
+  const ASSET_VERSION = "20260716.4";
+  const SCREEN_NAME_OVERRIDES = new Map([
+    ["SCR-WALK-007-coordination", "WALK 007 · Conversation"]
+  ]);
   const shell = document.querySelector(".prototype-shell");
   const device = document.querySelector("#device");
   const screenImage = document.querySelector("#screen-image");
@@ -65,6 +68,9 @@
   }
 
   function formatScreenName(screen) {
+    if (SCREEN_NAME_OVERRIDES.has(screen)) {
+      return SCREEN_NAME_OVERRIDES.get(screen);
+    }
     const match = screen.match(/^SCR-([A-Z-]+)-(\d+)-(.+)$/);
     if (!match) {
       return screen;
