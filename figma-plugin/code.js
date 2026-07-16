@@ -47,7 +47,7 @@ add("SCR-AUTH-006-recuperation", "Envoyer le lien", [24, 470, 342, 48], "SCR-AUT
 // Onboarding
 add("SCR-ONBOARD-001-onboarding", "Commencer", [24, 590, 342, 48], "SCR-ONBOARD-002-profil");
 addBack("SCR-ONBOARD-002-profil", "SCR-ONBOARD-001-onboarding");
-add("SCR-ONBOARD-002-profil", "Enregistrer le profil", [24, 620, 342, 48], "SCR-ONBOARD-003-premier-animal");
+add("SCR-ONBOARD-002-profil", "Enregistrer le profil", [24, 690, 342, 48], "SCR-ONBOARD-003-premier-animal");
 addBack("SCR-ONBOARD-003-premier-animal", "SCR-ONBOARD-002-profil");
 add("SCR-ONBOARD-003-premier-animal", "Ajouter un animal", [24, 590, 342, 48], "SCR-ANIMAL-003-creation");
 add("SCR-ONBOARD-003-premier-animal", "Continuer sans animal", [24, 652, 342, 42], "SCR-ONBOARD-004-localisation");
@@ -151,7 +151,7 @@ add("SCR-ACTIVITY-001-recapitulatif", "Voir l'historique", [16, 746, 358, 42], "
 add("SCR-ACTIVITY-002-historique", "Ouvrir la dernière sortie", [16, 154, 358, 108], "SCR-ACTIVITY-001-recapitulatif");
 addBottomNavigation("SCR-ACTIVITY-002-historique");
 addBack("SCR-USER-001-creation-profil", "SCR-USER-002-profil");
-add("SCR-USER-001-creation-profil", "Enregistrer mon profil", [24, 600, 342, 48], "SCR-USER-002-profil");
+add("SCR-USER-001-creation-profil", "Enregistrer mon profil", [24, 670, 342, 48], "SCR-USER-002-profil");
 add("SCR-USER-002-profil", "Modifier le profil", [24, 382, 342, 48], "SCR-USER-001-creation-profil");
 add("SCR-USER-002-profil", "Ouvrir les paramètres", [316, 42, 58, 54], "SCR-SETTINGS-001-parametres");
 add("SCR-USER-002-profil", "Mes animaux", [24, 282, 342, 78], "SCR-ANIMAL-002-liste");
