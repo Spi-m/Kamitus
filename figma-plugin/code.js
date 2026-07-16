@@ -3,6 +3,13 @@ const SCREEN_PREFIX = "SCR-";
 const ACTION_PREFIX = "Action · ";
 
 const actions = [];
+const screenAliases = [
+  ["SCR-ONBOARD-003A-animal-creation", "SCR-ANIMAL-003-creation"],
+  ["SCR-ONBOARD-003B-animal-races", "SCR-ANIMAL-004-selection-races"],
+  ["SCR-ONBOARD-003C-animal-photo", "SCR-ANIMAL-005-photo"],
+  ["SCR-ONBOARD-003D-animal-traits", "SCR-ANIMAL-006-traits"],
+  ["SCR-ONBOARD-003E-animal-sante", "SCR-ANIMAL-007-sante-vaccins"]
+];
 
 function add(source, label, box, target) {
   actions.push({ source, label, box, target });
@@ -49,8 +56,20 @@ add("SCR-ONBOARD-001-onboarding", "Commencer", [24, 590, 342, 48], "SCR-ONBOARD-
 addBack("SCR-ONBOARD-002-profil", "SCR-ONBOARD-001-onboarding");
 add("SCR-ONBOARD-002-profil", "Enregistrer le profil", [24, 690, 342, 48], "SCR-ONBOARD-003-premier-animal");
 addBack("SCR-ONBOARD-003-premier-animal", "SCR-ONBOARD-002-profil");
-add("SCR-ONBOARD-003-premier-animal", "Ajouter un animal", [24, 590, 342, 48], "SCR-ANIMAL-003-creation");
+add("SCR-ONBOARD-003-premier-animal", "Ajouter un animal", [24, 590, 342, 48], "SCR-ONBOARD-003A-animal-creation");
 add("SCR-ONBOARD-003-premier-animal", "Continuer sans animal", [24, 652, 342, 42], "SCR-ONBOARD-004-localisation");
+addBack("SCR-ONBOARD-003A-animal-creation", "SCR-ONBOARD-003-premier-animal");
+add("SCR-ONBOARD-003A-animal-creation", "Modifier la photo", [198, 176, 64, 60], "SCR-ONBOARD-003C-animal-photo");
+add("SCR-ONBOARD-003A-animal-creation", "Sélectionner les races", [24, 332, 342, 88], "SCR-ONBOARD-003B-animal-races");
+add("SCR-ONBOARD-003A-animal-creation", "Continuer vers les traits", [24, 690, 342, 48], "SCR-ONBOARD-003D-animal-traits");
+addBack("SCR-ONBOARD-003B-animal-races", "SCR-ONBOARD-003A-animal-creation");
+add("SCR-ONBOARD-003B-animal-races", "Valider les races", [24, 660, 342, 48], "SCR-ONBOARD-003A-animal-creation");
+addBack("SCR-ONBOARD-003C-animal-photo", "SCR-ONBOARD-003A-animal-creation");
+add("SCR-ONBOARD-003C-animal-photo", "Enregistrer la photo", [24, 692, 342, 48], "SCR-ONBOARD-003A-animal-creation");
+addBack("SCR-ONBOARD-003D-animal-traits", "SCR-ONBOARD-003A-animal-creation");
+add("SCR-ONBOARD-003D-animal-traits", "Continuer vers la santé", [24, 676, 342, 48], "SCR-ONBOARD-003E-animal-sante");
+addBack("SCR-ONBOARD-003E-animal-sante", "SCR-ONBOARD-003D-animal-traits");
+add("SCR-ONBOARD-003E-animal-sante", "Enregistrer le profil", [24, 700, 342, 48], "SCR-ONBOARD-004-localisation");
 addBack("SCR-ONBOARD-004-localisation", "SCR-ONBOARD-003-premier-animal");
 add("SCR-ONBOARD-004-localisation", "Autoriser la localisation", [24, 590, 342, 48], "SCR-ONBOARD-005-termine");
 add("SCR-ONBOARD-004-localisation", "Plus tard", [24, 652, 342, 42], "SCR-ONBOARD-005-termine");
@@ -221,6 +240,24 @@ async function main() {
     .findAllWithCriteria({ types: ["FRAME"] })
     .filter((node) => node.name.startsWith(SCREEN_PREFIX));
   const screens = Object.fromEntries(screenNodes.map((node) => [node.name, node]));
+  const aliasX = Math.min(...screenNodes.map((node) => node.x));
+  const aliasY = Math.max(...screenNodes.map((node) => node.y + node.height)) + 160;
+  const aliasGap = 80;
+  let createdAliases = 0;
+
+  for (const [alias, source] of screenAliases) {
+    if (screens[alias] || !screens[source]) {
+      continue;
+    }
+
+    const clone = screens[source].clone();
+    clone.name = alias;
+    clone.x = aliasX + createdAliases * (clone.width + aliasGap);
+    clone.y = aliasY;
+    screens[alias] = clone;
+    screenNodes.push(clone);
+    createdAliases += 1;
+  }
 
   const missingScreens = actions
     .flatMap(({ source, target }) => [source, target])
@@ -308,7 +345,7 @@ async function main() {
   figma.viewport.scrollAndZoomIntoView([start]);
 
   figma.closePlugin(
-    `Kamitus : ${actions.length - failures.length} interactions ajoutées, ${removed} anciennes remplacées, ${flowStarts.length} flows prêts${failures.length ? `, ${failures.length} interaction(s) ignorée(s)` : ""}.`
+    `Kamitus : ${actions.length - failures.length} interactions ajoutées, ${removed} anciennes remplacées, ${createdAliases} variante(s) créée(s), ${flowStarts.length} flows prêts${failures.length ? `, ${failures.length} interaction(s) ignorée(s)` : ""}.`
   );
 }
 
