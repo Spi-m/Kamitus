@@ -9,6 +9,7 @@
   const BASE_WIDTH = 390;
   const BASE_HEIGHT = 844;
   const SCREEN_PATH = "app-screens/screens/";
+  const ASSET_VERSION = "20260716.1";
   const shell = document.querySelector(".prototype-shell");
   const device = document.querySelector("#device");
   const screenImage = document.querySelector("#screen-image");
@@ -78,7 +79,7 @@
   }
 
   function imagePath(screen) {
-    return `${SCREEN_PATH}${screen}.png`;
+    return `${SCREEN_PATH}${screen}.png?v=${ASSET_VERSION}`;
   }
 
   function setPanelVisible(visible) {
