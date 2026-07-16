@@ -88,7 +88,7 @@ add("SCR-WALK-002-carte", "Afficher la liste", [316, 56, 62, 58], "SCR-WALK-001-
 add("SCR-WALK-002-carte", "Voir le détail", [88, 688, 266, 46], "SCR-WALK-003-detail");
 addBottomNavigation("SCR-WALK-002-carte");
 addBack("SCR-WALK-003-detail", "SCR-WALK-001-liste");
-add("SCR-WALK-003-detail", "Rejoindre la balade", [20, 684, 350, 46], "SCR-WALK-005-participation");
+add("SCR-WALK-003-detail", "S'inscrire à la balade", [20, 684, 350, 46], "SCR-WALK-005-participation");
 add("SCR-WALK-003-detail", "Lieu de rendez-vous", [20, 740, 170, 42], "SCR-WALK-009-lieu-rendez-vous");
 add("SCR-WALK-003-detail", "Parcours", [200, 740, 170, 42], "SCR-WALK-010-parcours");
 addBack("SCR-WALK-004-creation", "SCR-WALK-001-liste");
@@ -97,7 +97,7 @@ add("SCR-WALK-004-creation", "Animal participant", [24, 664, 342, 60], "SCR-ANIM
 add("SCR-WALK-004-creation", "Continuer vers le parcours", [24, 736, 342, 48], "SCR-NAV-ROUTE-001-definition");
 addBack("SCR-WALK-005-participation", "SCR-WALK-003-detail");
 add("SCR-WALK-005-participation", "Modifier les animaux", [270, 326, 100, 74], "SCR-ANIMAL-002-liste");
-add("SCR-WALK-005-participation", "Confirmer la participation", [20, 690, 350, 48], "SCR-WALK-008-detail-inscrit");
+add("SCR-WALK-005-participation", "Confirmer l'inscription", [20, 690, 350, 48], "SCR-WALK-008-detail-inscrit");
 addBottomNavigation("SCR-WALK-005-participation");
 addBack("SCR-WALK-006-participants", "SCR-WALK-008-detail-inscrit");
 add("SCR-WALK-006-participants", "Écrire au groupe", [20, 688, 350, 46], "SCR-WALK-007-coordination");
@@ -110,7 +110,7 @@ add("SCR-WALK-008-detail-inscrit", "Conversation", [200, 730, 170, 42], "SCR-WAL
 add("SCR-WALK-008-detail-inscrit", "Lieu de rendez-vous", [20, 780, 170, 42], "SCR-NAV-001-navigation-depart");
 add("SCR-WALK-008-detail-inscrit", "Parcours", [200, 780, 170, 42], "SCR-WALK-011-parcours-inscrit");
 addBack("SCR-WALK-009-lieu-rendez-vous", "SCR-WALK-003-detail");
-add("SCR-WALK-009-lieu-rendez-vous", "Rejoindre la balade", [16, 668, 358, 48], "SCR-WALK-005-participation");
+add("SCR-WALK-009-lieu-rendez-vous", "S'inscrire à la balade", [16, 668, 358, 48], "SCR-WALK-005-participation");
 addBack("SCR-WALK-010-parcours", "SCR-WALK-003-detail");
 addBack("SCR-WALK-011-parcours-inscrit", "SCR-WALK-008-detail-inscrit");
 
@@ -184,8 +184,8 @@ const flowStarts = [
   ["SCR-ANIMAL-002-liste", "Gérer les animaux"],
   ["SCR-WALK-001-liste", "Explorer les balades"],
   ["SCR-WALK-004-creation", "Créer une balade"],
-  ["SCR-WALK-003-detail", "Rejoindre une balade"],
-  ["SCR-WALK-008-detail-inscrit", "Balade rejointe"],
+  ["SCR-WALK-003-detail", "S'inscrire à une balade"],
+  ["SCR-WALK-008-detail-inscrit", "Inscription confirmée"],
   ["SCR-WALK-006-participants", "Participants et conversation"],
   ["SCR-NAV-ROUTE-001-definition", "Créer un parcours"],
   ["SCR-NAV-001-navigation-depart", "Navigation vers le départ"],
