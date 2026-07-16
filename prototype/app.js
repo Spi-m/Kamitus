@@ -9,7 +9,7 @@
   const BASE_WIDTH = 390;
   const BASE_HEIGHT = 844;
   const SCREEN_PATH = "app-screens/screens/";
-  const ASSET_VERSION = "20260716.4";
+  const ASSET_VERSION = "20260716.5";
   const SCREEN_NAME_OVERRIDES = new Map([
     ["SCR-WALK-007-coordination", "WALK 007 · Conversation"]
   ]);
@@ -44,6 +44,7 @@
     screen,
     name
   }));
+  const flowByStartScreen = new Map(flows.map((flow) => [flow.screen, flow]));
   const screens = new Set(
     data.actions
       .flatMap(({ source, target }) => [source, target])
@@ -165,6 +166,7 @@
       return;
     }
 
+    activeFlow = flowByStartScreen.get(screen) || activeFlow;
     const currentDepth = window.history.state?.depth || 0;
     const depth = options.depth ?? currentDepth + 1;
     const state = {
@@ -206,7 +208,7 @@
     buildFlowList();
     const location = getLocationFromHash();
     const initialScreen = location.screen || activeFlow.screen;
-    activeFlow = location.flow || flows.find(({ screen }) => screen === initialScreen) || activeFlow;
+    activeFlow = location.flow || flowByStartScreen.get(initialScreen) || activeFlow;
     navigate(initialScreen, { replace: true, depth: 0 });
 
     zonesToggle.addEventListener("change", () => {

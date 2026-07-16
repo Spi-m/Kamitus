@@ -25,6 +25,8 @@ Le site sera disponible sur `https://spi-m.github.io/Kamitus/`.
 
 Les écrans et interactions sont exportés depuis le kit de marque Kamitus. Les zones cliquables utilisent le même référentiel que le plugin Figma.
 
+Lorsqu'une navigation atteint le point de départ d'un autre parcours, le lecteur met automatiquement à jour le parcours actif, la sélection latérale et l'URL.
+
 ## Contribution
 
 Les changements directs sur `main` ne sont pas autorisés. Toute modification doit utiliser une branche dédiée, une pull request et un commit conforme à `CONTRIBUTING.md`.
