@@ -235,8 +235,17 @@ add("SCR-USER-002-profil", "Mes animaux", [16, 450, 358, 64], "SCR-ANIMAL-001-li
 add("SCR-USER-002-profil", "Paramètres", [16, 526, 358, 64], "SCR-SETTINGS-001-parametres");
 addBottomNavigation("SCR-USER-002-profil");
 addBack("SCR-SETTINGS-001-parametres", "SCR-USER-002-profil");
+add("SCR-SETTINGS-001-parametres", "Informations du compte", [16, 140, 358, 64], "SCR-SETTINGS-002-compte");
+add("SCR-SETTINGS-001-parametres", "Notifications", [16, 262, 358, 64], "SCR-PERM-001-permissions");
 add("SCR-SETTINGS-001-parametres", "Permissions", [16, 336, 358, 64], "SCR-PERM-001-permissions");
+add("SCR-SETTINGS-001-parametres", "Préférences", [16, 410, 358, 64], "SCR-SETTINGS-003-preferences");
+add("SCR-SETTINGS-001-parametres", "Centre d'aide", [16, 528, 358, 64], "SCR-SETTINGS-004-aide");
+add("SCR-SETTINGS-001-parametres", "À propos de Kamitus", [16, 602, 358, 64], "SCR-SETTINGS-005-a-propos");
 add("SCR-SETTINGS-001-parametres", "Se déconnecter", [16, 700, 358, 48], "SCR-AUTH-001-bienvenue");
+addBack("SCR-SETTINGS-002-compte", "SCR-SETTINGS-001-parametres");
+addBack("SCR-SETTINGS-003-preferences", "SCR-SETTINGS-001-parametres");
+addBack("SCR-SETTINGS-004-aide", "SCR-SETTINGS-001-parametres");
+addBack("SCR-SETTINGS-005-a-propos", "SCR-SETTINGS-001-parametres");
 addBack("SCR-PERM-001-permissions", "SCR-SETTINGS-001-parametres");
 add("SCR-PERM-001-permissions", "Réglages de localisation", [98, 282, 248, 36], "SCR-SETTINGS-001-parametres");
 add("SCR-PERM-001-permissions", "Réglages de notifications", [98, 446, 248, 36], "SCR-SETTINGS-001-parametres");
