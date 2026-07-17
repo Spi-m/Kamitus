@@ -111,9 +111,7 @@ add("SCR-WALK-003-detail", "S'inscrire à la balade", [20, 684, 350, 46], "SCR-W
 add("SCR-WALK-003-detail", "Lieu de rendez-vous", [20, 740, 170, 42], "SCR-WALK-009-lieu-rendez-vous");
 add("SCR-WALK-003-detail", "Parcours", [200, 740, 170, 42], "SCR-WALK-010-parcours");
 addBack("SCR-WALK-004-creation", "SCR-WALK-001-liste");
-add("SCR-WALK-004-creation", "Définir le parcours", [24, 596, 342, 60], "SCR-NAV-ROUTE-001-definition");
-add("SCR-WALK-004-creation", "Animal participant", [24, 664, 342, 60], "SCR-ANIMAL-002-liste");
-add("SCR-WALK-004-creation", "Continuer vers le parcours", [24, 736, 342, 48], "SCR-NAV-ROUTE-001-definition");
+add("SCR-WALK-004-creation", "Continuer vers le parcours", [24, 748, 342, 48], "SCR-NAV-ROUTE-001-definition");
 addBack("SCR-WALK-005-participation", "SCR-WALK-003-detail");
 add("SCR-WALK-005-participation", "Modifier les animaux", [270, 326, 100, 74], "SCR-ANIMAL-002-liste");
 add("SCR-WALK-005-participation", "Confirmer l'inscription", [20, 690, 350, 48], "SCR-WALK-008-detail-inscrit");
