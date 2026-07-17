@@ -271,17 +271,11 @@ const flowStarts = [
   ["SCR-WALK-001-liste", "Explorer les balades"],
   ["SCR-WALK-004-creation", "Créer une balade"],
   ["SCR-WALK-003-detail", "S'inscrire à une balade"],
-  ["SCR-WALK-008-detail-inscrit", "Inscription confirmée"],
-  ["SCR-WALK-006-participants", "Participants et conversation"],
-  ["SCR-NAV-ROUTE-001-definition", "Choisir un parcours"],
   ["SCR-NAV-001-navigation-depart", "Navigation vers le départ"],
   ["SCR-NAV-TRACK-001-demarrage", "Suivi de promenade"],
   ["SCR-ACTIVITY-002-historique", "Activité"],
   ["SCR-USER-002-profil", "Profil et réglages"],
-  ["SCR-PERM-001-permissions", "Permissions"],
-  ["SCR-WALK-012-creation-confirmee", "Balade créée"],
-  ["SCR-WALK-013-mes-balades", "Mes balades"],
-  ["SCR-WALK-015-detail-organisateur", "Gérer ma balade"]
+  ["SCR-WALK-013-mes-balades", "Gérer mes balades"]
 ];
 
 function nodeAction(destinationId, transitionType = "DISSOLVE") {
