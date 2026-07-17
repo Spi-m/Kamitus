@@ -152,12 +152,15 @@ add("SCR-WALK-012-creation-confirmee", "Voir ma balade", [24, 680, 342, 48], "SC
 add("SCR-WALK-012-creation-confirmee", "Modifier la balade", [24, 742, 342, 42], "SCR-WALK-004-creation");
 
 // Balades organisées et inscriptions
-add("SCR-WALK-013-mes-balades", "Inscriptions", [195, 110, 179, 46], "SCR-WALK-014-mes-inscriptions");
-add("SCR-WALK-013-mes-balades", "Ouvrir la balade organisée", [16, 278, 358, 142], "SCR-WALK-015-detail-organisateur");
-add("SCR-WALK-013-mes-balades", "Créer une balade", [16, 574, 358, 64], "SCR-WALK-004-creation");
+add("SCR-WALK-013-mes-balades", "Explorer", [16, 226, 179, 46], "SCR-WALK-001-liste");
+add("SCR-WALK-013-mes-balades", "Inscriptions", [195, 284, 179, 46], "SCR-WALK-014-mes-inscriptions");
+add("SCR-WALK-013-mes-balades", "Ouvrir la balade organisée", [16, 448, 358, 142], "SCR-WALK-015-detail-organisateur");
+add("SCR-WALK-013-mes-balades", "Créer une balade", [304, 700, 70, 70], "SCR-WALK-004-creation");
 addBottomNavigation("SCR-WALK-013-mes-balades");
-add("SCR-WALK-014-mes-inscriptions", "Organisées", [16, 110, 179, 46], "SCR-WALK-013-mes-balades");
-add("SCR-WALK-014-mes-inscriptions", "Ouvrir l'inscription", [16, 278, 358, 142], "SCR-WALK-008-detail-inscrit");
+add("SCR-WALK-014-mes-inscriptions", "Explorer", [16, 226, 179, 46], "SCR-WALK-001-liste");
+add("SCR-WALK-014-mes-inscriptions", "Organisées", [16, 284, 179, 46], "SCR-WALK-013-mes-balades");
+add("SCR-WALK-014-mes-inscriptions", "Ouvrir l'inscription", [16, 448, 358, 142], "SCR-WALK-008-detail-inscrit");
+add("SCR-WALK-014-mes-inscriptions", "Créer une balade", [304, 700, 70, 70], "SCR-WALK-004-creation");
 addBottomNavigation("SCR-WALK-014-mes-inscriptions");
 addBack("SCR-WALK-015-detail-organisateur", "SCR-WALK-013-mes-balades");
 add("SCR-WALK-015-detail-organisateur", "Participants", [20, 730, 170, 42], "SCR-WALK-016-participants-organisateur");
