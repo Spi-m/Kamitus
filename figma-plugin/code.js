@@ -99,9 +99,10 @@ add("SCR-ANIMAL-008-fiche", "Modifier la photo", [222, 174, 54, 54], "SCR-ANIMAL
 add("SCR-ANIMAL-008-fiche", "Voir les sorties", [24, 704, 342, 42], "SCR-ACTIVITY-002-historique");
 
 // Balades
-add("SCR-WALK-001-liste", "Voir la carte", [16, 226, 358, 44], "SCR-WALK-002-carte");
-add("SCR-WALK-001-liste", "Tour du lac", [16, 326, 358, 102], "SCR-WALK-003-detail");
-add("SCR-WALK-001-liste", "Créer une balade", [306, 680, 68, 74], "SCR-WALK-004-creation");
+add("SCR-WALK-001-liste", "Mes balades", [195, 226, 179, 46], "SCR-WALK-013-mes-balades");
+add("SCR-WALK-001-liste", "Voir la carte", [16, 284, 358, 44], "SCR-WALK-002-carte");
+add("SCR-WALK-001-liste", "Tour du lac", [16, 384, 358, 102], "SCR-WALK-003-detail");
+add("SCR-WALK-001-liste", "Créer une balade", [304, 700, 70, 70], "SCR-WALK-004-creation");
 addBottomNavigation("SCR-WALK-001-liste");
 add("SCR-WALK-002-carte", "Afficher la liste", [316, 56, 62, 58], "SCR-WALK-001-liste");
 add("SCR-WALK-002-carte", "Voir le détail", [88, 688, 266, 46], "SCR-WALK-003-detail");
@@ -147,8 +148,30 @@ add("SCR-NAV-ROUTE-004-export", "Exporter le GPX", [16, 630, 358, 64], "SCR-NAV-
 add("SCR-NAV-ROUTE-004-export", "Partager le lien", [16, 704, 358, 64], "SCR-NAV-ROUTE-002-apercu");
 
 // Confirmation de création
-add("SCR-WALK-012-creation-confirmee", "Voir les balades", [24, 680, 342, 48], "SCR-WALK-001-liste");
+add("SCR-WALK-012-creation-confirmee", "Voir ma balade", [24, 680, 342, 48], "SCR-WALK-015-detail-organisateur");
 add("SCR-WALK-012-creation-confirmee", "Modifier la balade", [24, 742, 342, 42], "SCR-WALK-004-creation");
+
+// Balades organisées et inscriptions
+add("SCR-WALK-013-mes-balades", "Inscriptions", [195, 110, 179, 46], "SCR-WALK-014-mes-inscriptions");
+add("SCR-WALK-013-mes-balades", "Ouvrir la balade organisée", [16, 278, 358, 142], "SCR-WALK-015-detail-organisateur");
+add("SCR-WALK-013-mes-balades", "Créer une balade", [16, 574, 358, 64], "SCR-WALK-004-creation");
+addBottomNavigation("SCR-WALK-013-mes-balades");
+add("SCR-WALK-014-mes-inscriptions", "Organisées", [16, 110, 179, 46], "SCR-WALK-013-mes-balades");
+add("SCR-WALK-014-mes-inscriptions", "Ouvrir l'inscription", [16, 278, 358, 142], "SCR-WALK-008-detail-inscrit");
+addBottomNavigation("SCR-WALK-014-mes-inscriptions");
+addBack("SCR-WALK-015-detail-organisateur", "SCR-WALK-013-mes-balades");
+add("SCR-WALK-015-detail-organisateur", "Participants", [20, 730, 170, 42], "SCR-WALK-016-participants-organisateur");
+add("SCR-WALK-015-detail-organisateur", "Conversation", [200, 730, 170, 42], "SCR-WALK-017-conversation-organisateur");
+add("SCR-WALK-015-detail-organisateur", "Modifier", [20, 780, 170, 42], "SCR-WALK-004-creation");
+add("SCR-WALK-015-detail-organisateur", "Annuler", [200, 780, 170, 42], "SCR-WALK-018-annulation");
+addBack("SCR-WALK-016-participants-organisateur", "SCR-WALK-015-detail-organisateur");
+add("SCR-WALK-016-participants-organisateur", "Ouvrir la conversation", [20, 700, 350, 46], "SCR-WALK-017-conversation-organisateur");
+addBottomNavigation("SCR-WALK-016-participants-organisateur");
+addBack("SCR-WALK-017-conversation-organisateur", "SCR-WALK-015-detail-organisateur");
+addBottomNavigation("SCR-WALK-017-conversation-organisateur");
+addBack("SCR-WALK-018-annulation", "SCR-WALK-015-detail-organisateur");
+add("SCR-WALK-018-annulation", "Confirmer l'annulation", [24, 680, 342, 48], "SCR-WALK-013-mes-balades");
+add("SCR-WALK-018-annulation", "Conserver la balade", [24, 742, 342, 42], "SCR-WALK-015-detail-organisateur");
 
 // Navigation jusqu'au point de départ
 addBack("SCR-NAV-001-navigation-depart", "SCR-WALK-008-detail-inscrit");
@@ -214,7 +237,9 @@ const flowStarts = [
   ["SCR-ACTIVITY-002-historique", "Activité"],
   ["SCR-USER-002-profil", "Profil et réglages"],
   ["SCR-PERM-001-permissions", "Permissions"],
-  ["SCR-WALK-012-creation-confirmee", "Balade créée"]
+  ["SCR-WALK-012-creation-confirmee", "Balade créée"],
+  ["SCR-WALK-013-mes-balades", "Mes balades"],
+  ["SCR-WALK-015-detail-organisateur", "Gérer ma balade"]
 ];
 
 function nodeAction(destinationId, transitionType = "DISSOLVE") {
