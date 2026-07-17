@@ -168,7 +168,7 @@ add("SCR-NAV-ROUTE-008-recherche", "Ouvrir Promenade du Pâquier", [16, 482, 358
 
 // Confirmation de création
 add("SCR-WALK-012-creation-confirmee", "Voir ma balade", [24, 680, 342, 48], "SCR-WALK-015-detail-organisateur");
-add("SCR-WALK-012-creation-confirmee", "Modifier la balade", [24, 742, 342, 42], "SCR-WALK-004-creation");
+add("SCR-WALK-012-creation-confirmee", "Modifier la balade", [24, 742, 342, 42], "SCR-WALK-019-modification");
 
 // Balades organisées et inscriptions
 add("SCR-WALK-013-mes-balades", "Explorer", [16, 226, 179, 46], "SCR-WALK-001-liste");
@@ -184,7 +184,7 @@ addBottomNavigation("SCR-WALK-014-mes-inscriptions");
 addBack("SCR-WALK-015-detail-organisateur", "SCR-WALK-013-mes-balades");
 add("SCR-WALK-015-detail-organisateur", "Participants", [20, 730, 170, 42], "SCR-WALK-016-participants-organisateur");
 add("SCR-WALK-015-detail-organisateur", "Conversation", [200, 730, 170, 42], "SCR-WALK-017-conversation-organisateur");
-add("SCR-WALK-015-detail-organisateur", "Modifier", [20, 780, 170, 42], "SCR-WALK-004-creation");
+add("SCR-WALK-015-detail-organisateur", "Modifier", [20, 780, 170, 42], "SCR-WALK-019-modification");
 add("SCR-WALK-015-detail-organisateur", "Annuler", [200, 780, 170, 42], "SCR-WALK-018-annulation");
 addBack("SCR-WALK-016-participants-organisateur", "SCR-WALK-015-detail-organisateur");
 add("SCR-WALK-016-participants-organisateur", "Ouvrir la conversation", [20, 700, 350, 46], "SCR-WALK-017-conversation-organisateur");
@@ -194,6 +194,8 @@ addBottomNavigation("SCR-WALK-017-conversation-organisateur");
 addBack("SCR-WALK-018-annulation", "SCR-WALK-015-detail-organisateur");
 add("SCR-WALK-018-annulation", "Confirmer l'annulation", [24, 680, 342, 48], "SCR-WALK-013-mes-balades");
 add("SCR-WALK-018-annulation", "Conserver la balade", [24, 742, 342, 42], "SCR-WALK-015-detail-organisateur");
+addBack("SCR-WALK-019-modification", "SCR-WALK-015-detail-organisateur");
+add("SCR-WALK-019-modification", "Enregistrer les modifications", [24, 748, 342, 48], "SCR-WALK-015-detail-organisateur");
 
 // Navigation jusqu'au point de départ
 addBack("SCR-NAV-001-navigation-depart", "SCR-WALK-008-detail-inscrit");

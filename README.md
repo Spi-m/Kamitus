@@ -1,6 +1,6 @@
 # Prototype web Kamitus
 
-Ce dépôt publie le prototype interactif de l'application Kamitus. Il contient 66 écrans mobiles, 225 interactions et 18 parcours fonctionnels.
+Ce dépôt publie le prototype interactif de l'application Kamitus. Il contient 67 écrans mobiles, 227 interactions et 18 parcours fonctionnels.
 
 ## Test local
 
@@ -34,6 +34,8 @@ Le choix du parcours donne accès à l'historique personnel, au dessin d'un nouv
 Après validation de l'aperçu, l'action `Créer la balade` publie la sortie et ouvre une confirmation permettant d'accéder directement au détail organisateur ou de revenir au formulaire de modification.
 
 Le sélecteur `Explorer / Mes balades` reste disponible dans les deux sections. `Mes balades` sépare ensuite les sorties organisées des inscriptions. Le détail organisateur donne accès à la modification, aux participants, à la conversation et à l'annulation avec confirmation.
+
+La modification d'une balade utilise un écran dédié : la flèche de retour et l'enregistrement reviennent au détail organisateur, sans repasser par le retour du formulaire de création.
 
 Lorsqu'une navigation atteint le point de départ d'un autre parcours, le lecteur met automatiquement à jour le parcours actif, la sélection latérale et l'URL.
 
