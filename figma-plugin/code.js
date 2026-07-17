@@ -99,9 +99,10 @@ add("SCR-ANIMAL-008-fiche", "Modifier la photo", [222, 174, 54, 54], "SCR-ANIMAL
 add("SCR-ANIMAL-008-fiche", "Voir les sorties", [24, 704, 342, 42], "SCR-ACTIVITY-002-historique");
 
 // Balades
-add("SCR-WALK-001-liste", "Voir la carte", [16, 226, 358, 44], "SCR-WALK-002-carte");
-add("SCR-WALK-001-liste", "Tour du lac", [16, 326, 358, 102], "SCR-WALK-003-detail");
-add("SCR-WALK-001-liste", "Créer une balade", [306, 680, 68, 74], "SCR-WALK-004-creation");
+add("SCR-WALK-001-liste", "Mes balades", [195, 226, 179, 46], "SCR-WALK-013-mes-balades");
+add("SCR-WALK-001-liste", "Voir la carte", [16, 284, 358, 44], "SCR-WALK-002-carte");
+add("SCR-WALK-001-liste", "Tour du lac", [16, 384, 358, 102], "SCR-WALK-003-detail");
+add("SCR-WALK-001-liste", "Créer une balade", [304, 700, 70, 70], "SCR-WALK-004-creation");
 addBottomNavigation("SCR-WALK-001-liste");
 add("SCR-WALK-002-carte", "Afficher la liste", [316, 56, 62, 58], "SCR-WALK-001-liste");
 add("SCR-WALK-002-carte", "Voir le détail", [88, 688, 266, 46], "SCR-WALK-003-detail");
@@ -111,7 +112,7 @@ add("SCR-WALK-003-detail", "S'inscrire à la balade", [20, 684, 350, 46], "SCR-W
 add("SCR-WALK-003-detail", "Lieu de rendez-vous", [20, 740, 170, 42], "SCR-WALK-009-lieu-rendez-vous");
 add("SCR-WALK-003-detail", "Parcours", [200, 740, 170, 42], "SCR-WALK-010-parcours");
 addBack("SCR-WALK-004-creation", "SCR-WALK-001-liste");
-add("SCR-WALK-004-creation", "Continuer vers le parcours", [24, 748, 342, 48], "SCR-NAV-ROUTE-001-definition");
+add("SCR-WALK-004-creation", "Définir le parcours", [24, 748, 342, 48], "SCR-NAV-ROUTE-001-definition");
 addBack("SCR-WALK-005-participation", "SCR-WALK-003-detail");
 add("SCR-WALK-005-participation", "Modifier les animaux", [270, 326, 100, 74], "SCR-ANIMAL-002-liste");
 add("SCR-WALK-005-participation", "Confirmer l'inscription", [20, 690, 350, 48], "SCR-WALK-008-detail-inscrit");
@@ -133,11 +134,14 @@ addBack("SCR-WALK-011-parcours-inscrit", "SCR-WALK-008-detail-inscrit");
 
 // Création, import et export d'un parcours
 addBack("SCR-NAV-ROUTE-001-definition", "SCR-WALK-004-creation");
-add("SCR-NAV-ROUTE-001-definition", "Voir l'aperçu", [16, 690, 358, 48], "SCR-NAV-ROUTE-002-apercu");
-add("SCR-NAV-ROUTE-001-definition", "Importer un GPX", [16, 752, 358, 42], "SCR-NAV-ROUTE-003-import-gpx");
+add("SCR-NAV-ROUTE-001-definition", "Communauté", [195, 110, 179, 46], "SCR-NAV-ROUTE-006-communaute");
+add("SCR-NAV-ROUTE-001-definition", "Ouvrir le parcours récent", [16, 276, 358, 110], "SCR-NAV-ROUTE-002-apercu");
+add("SCR-NAV-ROUTE-001-definition", "Ouvrir le second parcours", [16, 398, 358, 110], "SCR-NAV-ROUTE-002-apercu");
+add("SCR-NAV-ROUTE-001-definition", "Tracer un parcours", [16, 560, 358, 48], "SCR-NAV-ROUTE-005-creation");
+add("SCR-NAV-ROUTE-001-definition", "Importer un GPX", [16, 622, 358, 48], "SCR-NAV-ROUTE-003-import-gpx");
 addBack("SCR-NAV-ROUTE-002-apercu", "SCR-NAV-ROUTE-001-definition");
 add("SCR-NAV-ROUTE-002-apercu", "Options d'export", [316, 42, 58, 54], "SCR-NAV-ROUTE-004-export");
-add("SCR-NAV-ROUTE-002-apercu", "Confirmer le parcours", [16, 744, 358, 48], "SCR-WALK-004-creation");
+add("SCR-NAV-ROUTE-002-apercu", "Créer la balade", [16, 744, 358, 48], "SCR-WALK-012-creation-confirmee");
 addBack("SCR-NAV-ROUTE-003-import-gpx", "SCR-NAV-ROUTE-001-definition");
 add("SCR-NAV-ROUTE-003-import-gpx", "Choisir un fichier GPX", [62, 372, 266, 48], "SCR-NAV-ROUTE-002-apercu");
 add("SCR-NAV-ROUTE-003-import-gpx", "Annuler l'import", [24, 746, 342, 42], "SCR-NAV-ROUTE-001-definition");
@@ -145,6 +149,53 @@ addBack("SCR-NAV-ROUTE-004-export", "SCR-NAV-ROUTE-002-apercu");
 add("SCR-NAV-ROUTE-004-export", "Ouvrir dans une application", [16, 556, 358, 64], "SCR-NAV-ROUTE-002-apercu");
 add("SCR-NAV-ROUTE-004-export", "Exporter le GPX", [16, 630, 358, 64], "SCR-NAV-ROUTE-002-apercu");
 add("SCR-NAV-ROUTE-004-export", "Partager le lien", [16, 704, 358, 64], "SCR-NAV-ROUTE-002-apercu");
+addBack("SCR-NAV-ROUTE-005-creation", "SCR-NAV-ROUTE-001-definition");
+add("SCR-NAV-ROUTE-005-creation", "Voir l'aperçu", [16, 690, 358, 48], "SCR-NAV-ROUTE-002-apercu");
+add("SCR-NAV-ROUTE-005-creation", "Importer un GPX", [16, 752, 358, 42], "SCR-NAV-ROUTE-003-import-gpx");
+addBack("SCR-NAV-ROUTE-006-communaute", "SCR-WALK-004-creation");
+add("SCR-NAV-ROUTE-006-communaute", "Mes parcours", [16, 110, 179, 46], "SCR-NAV-ROUTE-001-definition");
+add("SCR-NAV-ROUTE-006-communaute", "Rechercher", [16, 170, 358, 44], "SCR-NAV-ROUTE-008-recherche");
+add("SCR-NAV-ROUTE-006-communaute", "Ouvrir Boucle des Marquisats", [16, 298, 358, 110], "SCR-NAV-ROUTE-007-detail-communautaire");
+add("SCR-NAV-ROUTE-006-communaute", "Ouvrir Forêt du Semnoz", [16, 416, 358, 110], "SCR-NAV-ROUTE-007-detail-communautaire");
+add("SCR-NAV-ROUTE-006-communaute", "Ouvrir Promenade du Pâquier", [16, 534, 358, 110], "SCR-NAV-ROUTE-007-detail-communautaire");
+addBack("SCR-NAV-ROUTE-007-detail-communautaire", "SCR-NAV-ROUTE-006-communaute");
+add("SCR-NAV-ROUTE-007-detail-communautaire", "Créer avec ce parcours", [16, 744, 358, 48], "SCR-WALK-012-creation-confirmee");
+addBack("SCR-NAV-ROUTE-008-recherche", "SCR-NAV-ROUTE-006-communaute");
+add("SCR-NAV-ROUTE-008-recherche", "Effacer la recherche", [326, 110, 48, 48], "SCR-NAV-ROUTE-006-communaute");
+add("SCR-NAV-ROUTE-008-recherche", "Ouvrir Boucle des Marquisats", [16, 246, 358, 110], "SCR-NAV-ROUTE-007-detail-communautaire");
+add("SCR-NAV-ROUTE-008-recherche", "Ouvrir Forêt du Semnoz", [16, 364, 358, 110], "SCR-NAV-ROUTE-007-detail-communautaire");
+add("SCR-NAV-ROUTE-008-recherche", "Ouvrir Promenade du Pâquier", [16, 482, 358, 110], "SCR-NAV-ROUTE-007-detail-communautaire");
+
+// Confirmation de création
+add("SCR-WALK-012-creation-confirmee", "Voir ma balade", [24, 680, 342, 48], "SCR-WALK-015-detail-organisateur");
+add("SCR-WALK-012-creation-confirmee", "Modifier la balade", [24, 742, 342, 42], "SCR-WALK-019-modification");
+
+// Balades organisées et inscriptions
+add("SCR-WALK-013-mes-balades", "Explorer", [16, 226, 179, 46], "SCR-WALK-001-liste");
+add("SCR-WALK-013-mes-balades", "Inscriptions", [195, 284, 179, 46], "SCR-WALK-014-mes-inscriptions");
+add("SCR-WALK-013-mes-balades", "Ouvrir la balade organisée", [16, 448, 358, 142], "SCR-WALK-015-detail-organisateur");
+add("SCR-WALK-013-mes-balades", "Créer une balade", [304, 700, 70, 70], "SCR-WALK-004-creation");
+addBottomNavigation("SCR-WALK-013-mes-balades");
+add("SCR-WALK-014-mes-inscriptions", "Explorer", [16, 226, 179, 46], "SCR-WALK-001-liste");
+add("SCR-WALK-014-mes-inscriptions", "Organisées", [16, 284, 179, 46], "SCR-WALK-013-mes-balades");
+add("SCR-WALK-014-mes-inscriptions", "Ouvrir l'inscription", [16, 448, 358, 142], "SCR-WALK-008-detail-inscrit");
+add("SCR-WALK-014-mes-inscriptions", "Créer une balade", [304, 700, 70, 70], "SCR-WALK-004-creation");
+addBottomNavigation("SCR-WALK-014-mes-inscriptions");
+addBack("SCR-WALK-015-detail-organisateur", "SCR-WALK-013-mes-balades");
+add("SCR-WALK-015-detail-organisateur", "Participants", [20, 730, 170, 42], "SCR-WALK-016-participants-organisateur");
+add("SCR-WALK-015-detail-organisateur", "Conversation", [200, 730, 170, 42], "SCR-WALK-017-conversation-organisateur");
+add("SCR-WALK-015-detail-organisateur", "Modifier", [20, 780, 170, 42], "SCR-WALK-019-modification");
+add("SCR-WALK-015-detail-organisateur", "Annuler", [200, 780, 170, 42], "SCR-WALK-018-annulation");
+addBack("SCR-WALK-016-participants-organisateur", "SCR-WALK-015-detail-organisateur");
+add("SCR-WALK-016-participants-organisateur", "Ouvrir la conversation", [20, 700, 350, 46], "SCR-WALK-017-conversation-organisateur");
+addBottomNavigation("SCR-WALK-016-participants-organisateur");
+addBack("SCR-WALK-017-conversation-organisateur", "SCR-WALK-015-detail-organisateur");
+addBottomNavigation("SCR-WALK-017-conversation-organisateur");
+addBack("SCR-WALK-018-annulation", "SCR-WALK-015-detail-organisateur");
+add("SCR-WALK-018-annulation", "Confirmer l'annulation", [24, 680, 342, 48], "SCR-WALK-013-mes-balades");
+add("SCR-WALK-018-annulation", "Conserver la balade", [24, 742, 342, 42], "SCR-WALK-015-detail-organisateur");
+addBack("SCR-WALK-019-modification", "SCR-WALK-015-detail-organisateur");
+add("SCR-WALK-019-modification", "Enregistrer les modifications", [24, 748, 342, 48], "SCR-WALK-015-detail-organisateur");
 
 // Navigation jusqu'au point de départ
 addBack("SCR-NAV-001-navigation-depart", "SCR-WALK-008-detail-inscrit");
@@ -174,17 +225,35 @@ add("SCR-NAV-TRACK-005-fin-parcours", "Continuer l'enregistrement", [24, 708, 34
 // Activité, profil et paramètres
 add("SCR-ACTIVITY-001-recapitulatif", "Enregistrer la sortie", [16, 686, 358, 48], "SCR-ACTIVITY-002-historique");
 add("SCR-ACTIVITY-001-recapitulatif", "Voir l'historique", [16, 746, 358, 42], "SCR-ACTIVITY-002-historique");
-add("SCR-ACTIVITY-002-historique", "Ouvrir la dernière sortie", [16, 154, 358, 108], "SCR-ACTIVITY-001-recapitulatif");
+add("SCR-ACTIVITY-002-historique", "Ouvrir Tour du lac", [16, 154, 358, 108], "SCR-ACTIVITY-003-detail");
+add("SCR-ACTIVITY-002-historique", "Ouvrir Bois des Glaisins", [16, 278, 358, 108], "SCR-ACTIVITY-003-detail");
+add("SCR-ACTIVITY-002-historique", "Ouvrir Promenade du Thiou", [16, 402, 358, 108], "SCR-ACTIVITY-003-detail");
+add("SCR-ACTIVITY-002-historique", "Ouvrir Sentier de Veyrier", [16, 526, 358, 108], "SCR-ACTIVITY-003-detail");
 addBottomNavigation("SCR-ACTIVITY-002-historique");
+addBack("SCR-ACTIVITY-003-detail", "SCR-ACTIVITY-002-historique");
+add("SCR-ACTIVITY-003-detail", "Modifier la sortie", [16, 686, 358, 48], "SCR-ACTIVITY-004-modification");
+add("SCR-ACTIVITY-003-detail", "Retour à l'historique", [16, 746, 358, 42], "SCR-ACTIVITY-002-historique");
+addBack("SCR-ACTIVITY-004-modification", "SCR-ACTIVITY-003-detail");
+add("SCR-ACTIVITY-004-modification", "Enregistrer les modifications", [24, 690, 342, 48], "SCR-ACTIVITY-003-detail");
 addBack("SCR-USER-001-creation-profil", "SCR-USER-002-profil");
 add("SCR-USER-001-creation-profil", "Enregistrer mon profil", [24, 670, 342, 48], "SCR-USER-002-profil");
 add("SCR-USER-002-profil", "Modifier le profil", [24, 382, 342, 48], "SCR-USER-001-creation-profil");
 add("SCR-USER-002-profil", "Ouvrir les paramètres", [316, 42, 58, 54], "SCR-SETTINGS-001-parametres");
-add("SCR-USER-002-profil", "Mes animaux", [24, 282, 342, 78], "SCR-ANIMAL-002-liste");
+add("SCR-USER-002-profil", "Mes animaux", [16, 450, 358, 64], "SCR-ANIMAL-001-liste-vide");
+add("SCR-USER-002-profil", "Paramètres", [16, 526, 358, 64], "SCR-SETTINGS-001-parametres");
 addBottomNavigation("SCR-USER-002-profil");
 addBack("SCR-SETTINGS-001-parametres", "SCR-USER-002-profil");
+add("SCR-SETTINGS-001-parametres", "Informations du compte", [16, 140, 358, 64], "SCR-SETTINGS-002-compte");
+add("SCR-SETTINGS-001-parametres", "Notifications", [16, 262, 358, 64], "SCR-PERM-001-permissions");
 add("SCR-SETTINGS-001-parametres", "Permissions", [16, 336, 358, 64], "SCR-PERM-001-permissions");
+add("SCR-SETTINGS-001-parametres", "Préférences", [16, 410, 358, 64], "SCR-SETTINGS-003-preferences");
+add("SCR-SETTINGS-001-parametres", "Centre d'aide", [16, 528, 358, 64], "SCR-SETTINGS-004-aide");
+add("SCR-SETTINGS-001-parametres", "À propos de Kamitus", [16, 602, 358, 64], "SCR-SETTINGS-005-a-propos");
 add("SCR-SETTINGS-001-parametres", "Se déconnecter", [16, 700, 358, 48], "SCR-AUTH-001-bienvenue");
+addBack("SCR-SETTINGS-002-compte", "SCR-SETTINGS-001-parametres");
+addBack("SCR-SETTINGS-003-preferences", "SCR-SETTINGS-001-parametres");
+addBack("SCR-SETTINGS-004-aide", "SCR-SETTINGS-001-parametres");
+addBack("SCR-SETTINGS-005-a-propos", "SCR-SETTINGS-001-parametres");
 addBack("SCR-PERM-001-permissions", "SCR-SETTINGS-001-parametres");
 add("SCR-PERM-001-permissions", "Réglages de localisation", [98, 282, 248, 36], "SCR-SETTINGS-001-parametres");
 add("SCR-PERM-001-permissions", "Réglages de notifications", [98, 446, 248, 36], "SCR-SETTINGS-001-parametres");
@@ -202,14 +271,11 @@ const flowStarts = [
   ["SCR-WALK-001-liste", "Explorer les balades"],
   ["SCR-WALK-004-creation", "Créer une balade"],
   ["SCR-WALK-003-detail", "S'inscrire à une balade"],
-  ["SCR-WALK-008-detail-inscrit", "Inscription confirmée"],
-  ["SCR-WALK-006-participants", "Participants et conversation"],
-  ["SCR-NAV-ROUTE-001-definition", "Créer un parcours"],
   ["SCR-NAV-001-navigation-depart", "Navigation vers le départ"],
   ["SCR-NAV-TRACK-001-demarrage", "Suivi de promenade"],
   ["SCR-ACTIVITY-002-historique", "Activité"],
   ["SCR-USER-002-profil", "Profil et réglages"],
-  ["SCR-PERM-001-permissions", "Permissions"]
+  ["SCR-WALK-013-mes-balades", "Gérer mes balades"]
 ];
 
 function nodeAction(destinationId, transitionType = "DISSOLVE") {
