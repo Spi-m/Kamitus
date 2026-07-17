@@ -1,6 +1,6 @@
 # Prototype web Kamitus
 
-Ce dépôt publie le prototype interactif de l'application Kamitus. Il contient 55 écrans mobiles, 168 interactions et 15 parcours fonctionnels.
+Ce dépôt publie le prototype interactif de l'application Kamitus. Il contient 56 écrans mobiles, 170 interactions et 16 parcours fonctionnels.
 
 ## Test local
 
@@ -28,6 +28,8 @@ Les écrans et interactions sont exportés depuis le kit de marque Kamitus. Les 
 La création du premier animal dispose d'un sous-parcours dédié : après l'enregistrement, l'onboarding reprend sur l'étape de localisation sans modifier le comportement de l'ajout depuis le profil.
 
 La création d'une balade définit les tailles de chiens acceptées, l'âge maximum et la capacité totale avant de passer à la définition du parcours. Elle ne sélectionne pas l'animal de l'organisateur.
+
+Après validation de l'aperçu, l'action `Créer la balade` publie la sortie et ouvre une confirmation permettant de consulter les balades ou de revenir au formulaire de modification.
 
 Lorsqu'une navigation atteint le point de départ d'un autre parcours, le lecteur met automatiquement à jour le parcours actif, la sélection latérale et l'URL.
 

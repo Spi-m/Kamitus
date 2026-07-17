@@ -137,7 +137,7 @@ add("SCR-NAV-ROUTE-001-definition", "Voir l'aperçu", [16, 690, 358, 48], "SCR-N
 add("SCR-NAV-ROUTE-001-definition", "Importer un GPX", [16, 752, 358, 42], "SCR-NAV-ROUTE-003-import-gpx");
 addBack("SCR-NAV-ROUTE-002-apercu", "SCR-NAV-ROUTE-001-definition");
 add("SCR-NAV-ROUTE-002-apercu", "Options d'export", [316, 42, 58, 54], "SCR-NAV-ROUTE-004-export");
-add("SCR-NAV-ROUTE-002-apercu", "Confirmer le parcours", [16, 744, 358, 48], "SCR-WALK-004-creation");
+add("SCR-NAV-ROUTE-002-apercu", "Créer la balade", [16, 744, 358, 48], "SCR-WALK-012-creation-confirmee");
 addBack("SCR-NAV-ROUTE-003-import-gpx", "SCR-NAV-ROUTE-001-definition");
 add("SCR-NAV-ROUTE-003-import-gpx", "Choisir un fichier GPX", [62, 372, 266, 48], "SCR-NAV-ROUTE-002-apercu");
 add("SCR-NAV-ROUTE-003-import-gpx", "Annuler l'import", [24, 746, 342, 42], "SCR-NAV-ROUTE-001-definition");
@@ -145,6 +145,10 @@ addBack("SCR-NAV-ROUTE-004-export", "SCR-NAV-ROUTE-002-apercu");
 add("SCR-NAV-ROUTE-004-export", "Ouvrir dans une application", [16, 556, 358, 64], "SCR-NAV-ROUTE-002-apercu");
 add("SCR-NAV-ROUTE-004-export", "Exporter le GPX", [16, 630, 358, 64], "SCR-NAV-ROUTE-002-apercu");
 add("SCR-NAV-ROUTE-004-export", "Partager le lien", [16, 704, 358, 64], "SCR-NAV-ROUTE-002-apercu");
+
+// Confirmation de création
+add("SCR-WALK-012-creation-confirmee", "Voir les balades", [24, 680, 342, 48], "SCR-WALK-001-liste");
+add("SCR-WALK-012-creation-confirmee", "Modifier la balade", [24, 742, 342, 42], "SCR-WALK-004-creation");
 
 // Navigation jusqu'au point de départ
 addBack("SCR-NAV-001-navigation-depart", "SCR-WALK-008-detail-inscrit");
@@ -209,7 +213,8 @@ const flowStarts = [
   ["SCR-NAV-TRACK-001-demarrage", "Suivi de promenade"],
   ["SCR-ACTIVITY-002-historique", "Activité"],
   ["SCR-USER-002-profil", "Profil et réglages"],
-  ["SCR-PERM-001-permissions", "Permissions"]
+  ["SCR-PERM-001-permissions", "Permissions"],
+  ["SCR-WALK-012-creation-confirmee", "Balade créée"]
 ];
 
 function nodeAction(destinationId, transitionType = "DISSOLVE") {
