@@ -225,8 +225,16 @@ add("SCR-NAV-TRACK-005-fin-parcours", "Continuer l'enregistrement", [24, 708, 34
 // Activité, profil et paramètres
 add("SCR-ACTIVITY-001-recapitulatif", "Enregistrer la sortie", [16, 686, 358, 48], "SCR-ACTIVITY-002-historique");
 add("SCR-ACTIVITY-001-recapitulatif", "Voir l'historique", [16, 746, 358, 42], "SCR-ACTIVITY-002-historique");
-add("SCR-ACTIVITY-002-historique", "Ouvrir la dernière sortie", [16, 154, 358, 108], "SCR-ACTIVITY-001-recapitulatif");
+add("SCR-ACTIVITY-002-historique", "Ouvrir Tour du lac", [16, 154, 358, 108], "SCR-ACTIVITY-003-detail");
+add("SCR-ACTIVITY-002-historique", "Ouvrir Bois des Glaisins", [16, 278, 358, 108], "SCR-ACTIVITY-003-detail");
+add("SCR-ACTIVITY-002-historique", "Ouvrir Promenade du Thiou", [16, 402, 358, 108], "SCR-ACTIVITY-003-detail");
+add("SCR-ACTIVITY-002-historique", "Ouvrir Sentier de Veyrier", [16, 526, 358, 108], "SCR-ACTIVITY-003-detail");
 addBottomNavigation("SCR-ACTIVITY-002-historique");
+addBack("SCR-ACTIVITY-003-detail", "SCR-ACTIVITY-002-historique");
+add("SCR-ACTIVITY-003-detail", "Modifier la sortie", [16, 686, 358, 48], "SCR-ACTIVITY-004-modification");
+add("SCR-ACTIVITY-003-detail", "Retour à l'historique", [16, 746, 358, 42], "SCR-ACTIVITY-002-historique");
+addBack("SCR-ACTIVITY-004-modification", "SCR-ACTIVITY-003-detail");
+add("SCR-ACTIVITY-004-modification", "Enregistrer les modifications", [24, 690, 342, 48], "SCR-ACTIVITY-003-detail");
 addBack("SCR-USER-001-creation-profil", "SCR-USER-002-profil");
 add("SCR-USER-001-creation-profil", "Enregistrer mon profil", [24, 670, 342, 48], "SCR-USER-002-profil");
 add("SCR-USER-002-profil", "Modifier le profil", [24, 382, 342, 48], "SCR-USER-001-creation-profil");

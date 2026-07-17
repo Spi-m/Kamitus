@@ -1,6 +1,6 @@
 # Prototype web Kamitus
 
-Ce dépôt publie le prototype interactif de l'application Kamitus. Il contient 71 écrans mobiles, 237 interactions et 18 parcours fonctionnels.
+Ce dépôt publie le prototype interactif de l'application Kamitus. Il contient 73 écrans mobiles, 245 interactions et 18 parcours fonctionnels.
 
 ## Test local
 
@@ -40,6 +40,8 @@ La modification d'une balade utilise un écran dédié : la flèche de retour et
 Depuis le profil, les cartes `Mes animaux` et `Paramètres` sont entièrement cliquables. L'état sans animal ouvre la liste vide adaptée, tandis que la carte et l'icône de réglages ouvrent les paramètres.
 
 Les réglages donnent accès à des écrans dédiés pour les informations du compte, les préférences, le centre d'aide et les informations de version. Les notifications et permissions ouvrent la gestion des autorisations.
+
+Le récapitulatif de fin de suivi sert uniquement à enregistrer une nouvelle sortie. Depuis l'historique, chaque activité ouvre un détail enregistré distinct, puis un formulaire permettant de modifier la sortie avant de revenir à ce détail.
 
 Lorsqu'une navigation atteint le point de départ d'un autre parcours, le lecteur met automatiquement à jour le parcours actif, la sélection latérale et l'URL.
 
