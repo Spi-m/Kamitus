@@ -134,8 +134,11 @@ addBack("SCR-WALK-011-parcours-inscrit", "SCR-WALK-008-detail-inscrit");
 
 // Création, import et export d'un parcours
 addBack("SCR-NAV-ROUTE-001-definition", "SCR-WALK-004-creation");
-add("SCR-NAV-ROUTE-001-definition", "Voir l'aperçu", [16, 690, 358, 48], "SCR-NAV-ROUTE-002-apercu");
-add("SCR-NAV-ROUTE-001-definition", "Importer un GPX", [16, 752, 358, 42], "SCR-NAV-ROUTE-003-import-gpx");
+add("SCR-NAV-ROUTE-001-definition", "Communauté", [195, 110, 179, 46], "SCR-NAV-ROUTE-006-communaute");
+add("SCR-NAV-ROUTE-001-definition", "Ouvrir le parcours récent", [16, 276, 358, 110], "SCR-NAV-ROUTE-002-apercu");
+add("SCR-NAV-ROUTE-001-definition", "Ouvrir le second parcours", [16, 398, 358, 110], "SCR-NAV-ROUTE-002-apercu");
+add("SCR-NAV-ROUTE-001-definition", "Tracer un parcours", [16, 560, 358, 48], "SCR-NAV-ROUTE-005-creation");
+add("SCR-NAV-ROUTE-001-definition", "Importer un GPX", [16, 622, 358, 48], "SCR-NAV-ROUTE-003-import-gpx");
 addBack("SCR-NAV-ROUTE-002-apercu", "SCR-NAV-ROUTE-001-definition");
 add("SCR-NAV-ROUTE-002-apercu", "Options d'export", [316, 42, 58, 54], "SCR-NAV-ROUTE-004-export");
 add("SCR-NAV-ROUTE-002-apercu", "Créer la balade", [16, 744, 358, 48], "SCR-WALK-012-creation-confirmee");
@@ -146,6 +149,22 @@ addBack("SCR-NAV-ROUTE-004-export", "SCR-NAV-ROUTE-002-apercu");
 add("SCR-NAV-ROUTE-004-export", "Ouvrir dans une application", [16, 556, 358, 64], "SCR-NAV-ROUTE-002-apercu");
 add("SCR-NAV-ROUTE-004-export", "Exporter le GPX", [16, 630, 358, 64], "SCR-NAV-ROUTE-002-apercu");
 add("SCR-NAV-ROUTE-004-export", "Partager le lien", [16, 704, 358, 64], "SCR-NAV-ROUTE-002-apercu");
+addBack("SCR-NAV-ROUTE-005-creation", "SCR-NAV-ROUTE-001-definition");
+add("SCR-NAV-ROUTE-005-creation", "Voir l'aperçu", [16, 690, 358, 48], "SCR-NAV-ROUTE-002-apercu");
+add("SCR-NAV-ROUTE-005-creation", "Importer un GPX", [16, 752, 358, 42], "SCR-NAV-ROUTE-003-import-gpx");
+addBack("SCR-NAV-ROUTE-006-communaute", "SCR-WALK-004-creation");
+add("SCR-NAV-ROUTE-006-communaute", "Mes parcours", [16, 110, 179, 46], "SCR-NAV-ROUTE-001-definition");
+add("SCR-NAV-ROUTE-006-communaute", "Rechercher", [16, 170, 358, 44], "SCR-NAV-ROUTE-008-recherche");
+add("SCR-NAV-ROUTE-006-communaute", "Ouvrir Boucle des Marquisats", [16, 298, 358, 110], "SCR-NAV-ROUTE-007-detail-communautaire");
+add("SCR-NAV-ROUTE-006-communaute", "Ouvrir Forêt du Semnoz", [16, 416, 358, 110], "SCR-NAV-ROUTE-007-detail-communautaire");
+add("SCR-NAV-ROUTE-006-communaute", "Ouvrir Promenade du Pâquier", [16, 534, 358, 110], "SCR-NAV-ROUTE-007-detail-communautaire");
+addBack("SCR-NAV-ROUTE-007-detail-communautaire", "SCR-NAV-ROUTE-006-communaute");
+add("SCR-NAV-ROUTE-007-detail-communautaire", "Créer avec ce parcours", [16, 744, 358, 48], "SCR-WALK-012-creation-confirmee");
+addBack("SCR-NAV-ROUTE-008-recherche", "SCR-NAV-ROUTE-006-communaute");
+add("SCR-NAV-ROUTE-008-recherche", "Effacer la recherche", [326, 110, 48, 48], "SCR-NAV-ROUTE-006-communaute");
+add("SCR-NAV-ROUTE-008-recherche", "Ouvrir Boucle des Marquisats", [16, 246, 358, 110], "SCR-NAV-ROUTE-007-detail-communautaire");
+add("SCR-NAV-ROUTE-008-recherche", "Ouvrir Forêt du Semnoz", [16, 364, 358, 110], "SCR-NAV-ROUTE-007-detail-communautaire");
+add("SCR-NAV-ROUTE-008-recherche", "Ouvrir Promenade du Pâquier", [16, 482, 358, 110], "SCR-NAV-ROUTE-007-detail-communautaire");
 
 // Confirmation de création
 add("SCR-WALK-012-creation-confirmee", "Voir ma balade", [24, 680, 342, 48], "SCR-WALK-015-detail-organisateur");
@@ -234,7 +253,7 @@ const flowStarts = [
   ["SCR-WALK-003-detail", "S'inscrire à une balade"],
   ["SCR-WALK-008-detail-inscrit", "Inscription confirmée"],
   ["SCR-WALK-006-participants", "Participants et conversation"],
-  ["SCR-NAV-ROUTE-001-definition", "Créer un parcours"],
+  ["SCR-NAV-ROUTE-001-definition", "Choisir un parcours"],
   ["SCR-NAV-001-navigation-depart", "Navigation vers le départ"],
   ["SCR-NAV-TRACK-001-demarrage", "Suivi de promenade"],
   ["SCR-ACTIVITY-002-historique", "Activité"],
